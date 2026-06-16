@@ -1,10 +1,10 @@
 ---@diagnostic disable: undefined-global
 
 function spawnEnemy()
-    -- Stops the screen from becoming impossible
-    if #enemies >= maxEnemies then
-        return
-    end
+    -- Stops the screen from becoming impossible. Only Remove Comments if you think unlimited too much
+   -- if #enemies >= maxEnemies then
+   --     return
+   -- end
 
     local types = {
         {name = "Duck Army", message = "The duck army got too powerful."},
@@ -21,7 +21,7 @@ function spawnEnemy()
         x = x,
         y = y,
         size = 32,
-        speed = math.min(95, 50 + level * 5),
+        speed = math.min(95, 50 + level * 3),
         name = chosen.name,
         message = chosen.message
     }
